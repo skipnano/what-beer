@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>What Beer</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link href='https://fonts.googleapis.com/css?family=Bad+Script|Press+Start+2P' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+	<div class="container-background">
+		<div class="container-content">
+			<header>
+				<h1>What Beer</h1>
+			</header>
+
+			<p class="tag" id="introTag">Your beer is waiting for you. Go find it.</p>
+
+			<form>
+				<div class="beer-box" id="questions">
+					<label for="q1">Light or Dark?</label><br>
+					<select class="questions" id="q1">
+						<option value="default" selected="select one">Select one</option>
+						<option value="Light">Light</option>
+						<option value="Dark">Dark</option>
+					</select><br>
+					<label for="q2">How much alcohol?</label><br>
+					<select class="questions" id="q2">
+						<option value="default" selected="select one">Select one</option>
+						<option value="A ton">A ton</option>
+						<option value="Normal">A normal amount</option>
+						<option value="A little">A little</option>
+					</select><br>
+					<label for="q3">How do you feel?</label><br>
+					<select class="questions" id="q3">
+						<option value="default" selected="select one">Select one</option>
+						<option value="Patriotic">Patriotic</option>
+						<option value="Sweaty">Sweaty</option>
+						<option value="Happy">Happy</option>
+						<option value="Angry">Angry</option>
+					</select><br>
+					<label for="q4">Hot or cold?</label><br>
+					<select class="questions" id="q4">
+						<option value="default" selected="select one">Select one</option>
+						<option value="Hot">It's hot out</option>
+						<option value="Cold">It's winter</option>
+					</select><br>
+				</div>
+
+				<input type="submit" id="find" name="find" value="Find My Beer!">
+			</form>
+
+				<button id="rando-beer" name="generate-random-beer">Or Get A Random Beer!</button>
+
+			<div class="beer-results hide" id="results">
+				<div id="img-column">
+					<img src="">
+				</div>
+				<div id="info-column"></div>
+			</div>
+		
+			<button id="findAnother" name="reset">Find Another Beer!</button>
+			
+
+			<footer>
+				<h2>What beer should you have?</h2>
+				<nav>
+					<img src="images/twitter.png" href="twitter.com">
+					<img src="images/facebook.png" href="facebook.com">
+				</nav>
+				<p>Copyright 2015. What Beer.</p>
+				<p>Random beers generated using http://prost.herokuapp.com/api/v1</p>
+			</footer>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script rel="text/javascript" src="js/index.js"></script>
+
+</body>
+</html>

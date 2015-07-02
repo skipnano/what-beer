@@ -1,0 +1,232 @@
+/*
+Project: What Beer - Final Project
+Coded by: Dean Gilroy
+*/
+
+/*font-family: 'Press Start 2P', cursive;
+font-family: 'Bad Script', cursive;*/
+
+/*html {
+	font-size: .625rem;
+}*/
+
+.container-background {
+	margin: 0 auto;
+	background: #FFCC33;
+}
+
+.container-content {
+	margin: 0 auto;
+	max-width: 960px;
+	background: #DDD;
+}
+
+.beer-box {
+	background: #FFCC33;
+	width: 300px;
+	height: 400px;
+	text-align: center;
+	margin: 35px auto 20px auto;
+	padding: 20px 20px;
+	-webkit-clip-path: polygon(0% 0%, 50% 200%, 100% 0%);
+	box-shadow: 0 3px #CCC;
+	border-top: 20px solid #FFF;
+}
+.questions {
+	color: #333;
+  	background-color: #fff;
+  	border-color: #fff;
+  	font-size: 15px;
+}
+
+.beer-results {
+	background: #FFCC33;
+	max-width: 550px;
+	height: 450px;
+	margin: 35px auto 20px auto;
+	padding: 20px 20px;
+	box-shadow: 3px 3px 5px #CCC;
+	clear: both;
+}
+.hide {
+	display: none;
+}
+select {
+	margin: 20px;
+}
+
+form label {
+	font-family: 'Bad Script', cursive;
+	font-size: 24px;
+}
+
+header {
+	background: black;
+	color: white;
+	height: 75px;
+	overflow: hidden;
+}
+h1 {
+	margin: 0;
+	padding: 20px 10px 10px 10px;
+	font-family: 'Press Start 2P', cursive;
+	width: 500px;
+}
+
+h2 {
+	font-family: 'Press Start 2P', cursive;
+	padding: 20px;
+	font-size: 20px;
+}
+footer {
+	background: black;
+	color: white;
+	text-align: center;
+}
+nav {
+	margin-right: 10px;
+}
+nav img{
+	padding: 10px 20px;
+}
+
+#find {
+	padding: 10px 20px;
+	margin: 0 auto;
+	background-color: slategray;
+  	color: white;
+  	border: none;
+  	font-family: 'Press Start 2P', cursive;
+  	display: block;
+}
+#findAnother {
+	padding: 10px 20px;
+	margin-left: 320px;
+	background-color: slategray;
+  	color: white;
+  	border: none;
+  	font-family: 'Press Start 2P', cursive;
+  	display: none;
+}
+.tag {
+	text-align: center;
+	font-family: 'Bad Script', cursive;
+	font-size: 35px;
+}
+#img-column {
+	float: left;
+	max-width: 145px;
+}
+
+#info-column {
+/*	float: left;*/
+	padding: 0 50px;
+/*	width: 300px;*/
+}
+.info {
+	font-size: 25px;
+	text-align: center;
+	font-family: 'Bad Script', cursive;
+	padding: 10px 30px;
+}
+#rando-beer {
+	padding: 10px 20px;
+	margin: 20px auto;
+	background-color: slategray;
+  	color: white;
+  	border: none;
+  	font-family: 'Press Start 2P', cursive;
+  	display: block;
+}
+.rando {
+	font-size: 30px;
+	text-align: center;
+	font-family: 'Bad Script', cursive;
+	padding: 0;
+	margin-top: 75px;
+}
+
+#find:hover {
+	border: 5px dashed #FFCC33;
+}
+#rando-beer:hover {
+	border: 5px dashed #FFCC33;
+}
+#findAnother:hover {
+	border: 5px dashed #FFCC33;
+}
+
+/*BEGIN RESPONSIVE*/
+
+@media only screen and (max-width: 768px) {
+
+/*	.container-background {
+		display: none;
+	}*/
+
+	.tag {
+		font-size: 1.5rem;
+	}
+
+	.container-content {
+		width: 95%;
+	}
+
+	#introTag p {
+		width: 100%;
+	}
+
+	.beer-box {
+		/*width: 85%;*/
+		/*margin: 14px;*/
+		margin: 35px auto 20px auto;
+	}
+
+	.questions {
+		width: 60%;
+		margin: 10px;
+	}
+	#find {
+		width: 90%;
+		margin: 6%;
+	}
+	.beer-results {
+		width: 85%;
+		margin: 3%;
+		height: 325px;
+	}
+	#img-column {
+		display: none;
+	}
+	#findAnother {
+		margin: 5%;
+		width: 90%;
+	}
+	#info-column {
+		margin: 0%;
+		height: 300px;
+		padding: 5%;
+	}
+	.info {
+		font-size: 2.0rem;
+		/*width: 120%;*/
+	}
+	#rando-beer {
+		margin: 6%;
+		width: 90%;
+		margin-top: 0%;
+		padding: 3%;
+	}
+	.rando {
+		font-size: 2.0rem;
+		margin: 0;
+		padding: 5%;
+	}
+
+}
+
+
+
+
+
+
