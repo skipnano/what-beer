@@ -1,5 +1,5 @@
 // Project: Final Project - What Beer
-// Coded by: Dean Gilroy
+// Coded by: Dean G
 
 /*
 BEGIN PSEUDO CODE
@@ -131,7 +131,7 @@ $(document).ready(function() {
 				}
 		});
 
-		//BEER API - This function GETs a random beer from the beer.db api
+		//BEER API - This function GETs a random beer from the beer.db api - http://prost.herokuapp.com/api/v1
 		$("#rando-beer").click( function() {
 
 				var randomBeer = "http://prost.herokuapp.com/api/v1/beer/rand";
@@ -148,12 +148,15 @@ $(document).ready(function() {
 				$("#rando-beer").hide();
 				$("#findAnother").css('display', 'block');
 				$("#results, #questions").toggleClass("hide");
+				//Validation to see of the request returned data, if null display a string
 				var title = data.title || "No title available";
 				$("#info-column").append("<p class='rando'>" + title + "</p>");
 				// $(".info:nth-child(1)").html(data.title);
+				//Validation to see of the request returned data, if null display a string
 				var breweryTitle = data.brewery.title || "No brewery available";
 				$("#info-column").append("<p class='rando'>" + breweryTitle + "</p>");
 				// $(".info:nth-child(2)").html(data.brewery.title);
+				//Validation to see of the request returned data, if null display a string
 				var alcohol = data.abv || "No";
 				$("#info-column").append("<p class='rando'>" + alcohol +  " ABV </p>");
 				// $(".info:nth-child(3)").html(data.abv);
@@ -166,12 +169,7 @@ $(document).ready(function() {
 
 		/*
 		listen for click on #findAnother
-			function reset()
-			Change #introtag to default text
-			Hide beer results, beer image, and beer info
-			Toggle on beer-box, questions
-			Hide #findAnother
-			Show #find
+			reload the page using jQuery
 		*/
 
 		$("#findAnother").click( function() {

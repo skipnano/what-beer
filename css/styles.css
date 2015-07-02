@@ -1,14 +1,11 @@
 /*
 Project: What Beer - Final Project
-Coded by: Dean Gilroy
+Coded by: Dean G
 */
 
 /*font-family: 'Press Start 2P', cursive;
 font-family: 'Bad Script', cursive;*/
 
-/*html {
-	font-size: .625rem;
-}*/
 
 .container-background {
 	margin: 0 auto;
@@ -223,7 +220,8 @@ nav img{
 		padding: 5%;
 	}
 
-}
+} 
+/*END RESPONSIVE*/
 
 
 
