@@ -3,7 +3,8 @@ Project: What Beer - Final Project
 Coded by: Dean G
 */
 
-/*font-family: 'Press Start 2P', cursive;
+/*Google Fonts
+font-family: 'Press Start 2P', cursive;
 font-family: 'Bad Script', cursive;*/
 
 
@@ -157,10 +158,6 @@ nav img{
 
 @media only screen and (max-width: 768px) {
 
-/*	.container-background {
-		display: none;
-	}*/
-
 	.tag {
 		font-size: 1.5rem;
 	}
@@ -174,8 +171,6 @@ nav img{
 	}
 
 	.beer-box {
-		/*width: 85%;*/
-		/*margin: 14px;*/
 		margin: 35px auto 20px auto;
 	}
 
@@ -206,7 +201,6 @@ nav img{
 	}
 	.info {
 		font-size: 2.0rem;
-		/*width: 120%;*/
 	}
 	#rando-beer {
 		margin: 6%;

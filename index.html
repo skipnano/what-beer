@@ -19,7 +19,7 @@
 			</header>
 
 			<p class="tag" id="introTag">Your beer is waiting for you. Go find it.</p>
-
+			<!-- BEGIN BEER QUESTIONS FORM -->
 			<form>
 				<div class="beer-box" id="questions">
 					<label for="q1">Light or Dark?</label><br>
@@ -53,18 +53,22 @@
 
 				<input type="submit" id="find" name="find" value="Find My Beer!">
 			</form>
+			<!-- END BEER QUESTIONS FORM -->
 
-				<button id="rando-beer" name="generate-random-beer">Or Get A Random Beer!</button>
+			<button id="rando-beer" name="generate-random-beer">Or Get A Random Beer!</button>
 
+			<!-- RESULTS DIV HIDDEN ON PAGE LOAD -->
 			<div class="beer-results hide" id="results">
 				<div id="img-column">
 					<img src="">
 				</div>
 				<div id="info-column"></div>
 			</div>
-		
+			<!-- END RESULTS DIV -->
+
+			<!-- FIND ANOTHER BUTTON HIDDEN ON PAGE LOAD -->
 			<button id="findAnother" name="reset">Find Another Beer!</button>
-			
+			<!-- END FIND ANOTHER -->
 
 			<footer>
 				<h2>What beer should you have?</h2>
@@ -77,9 +81,10 @@
 			</footer>
 		</div>
 	</div>
-
+	<!-- BEGIN JQUERY AND INDEX.JS -->
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script rel="text/javascript" src="js/index.js"></script>
+	<!-- END SCRIPTS -->
 
 </body>
 </html>

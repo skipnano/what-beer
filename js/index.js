@@ -28,8 +28,7 @@ $(document).ready(function() {
 			var q2Val = $("#q2").val();
 			var q3Val = $("#q3").val();
 			var q4Val = $("#q4").val();
-			// console.log(q1Val);
-			// console.log("sumbitted!");
+
 
 			// the below sets the array equal to the slected values in the above varibales
 			var surveyRes = [];
@@ -91,9 +90,6 @@ $(document).ready(function() {
 				$("#info-column").append("<p class='info'>" + beerDB[1].name + "</p>");
 				$("#info-column").append("<p class='info'>" + beerDB[1].brewery + "</p>");
 				$("#info-column").append("<p class='info'>" + beerDB[1].abv + "</p>");
-				// $(".info:nth-child(1)").html(beerDB[1].name);
-				// $(".info:nth-child(2)").html(beerDB[1].brewery);
-				// $(".info:nth-child(3)").html(beerDB[1].abv);
 			} else if ((surveyRes[0] == "Light") && (surveyRes[1] == "A little") && (surveyRes[2] == "Sweaty") && (surveyRes[3] == "Hot")) {
 				console.log("C3 is true. Modify HTML with results with Brooklyn Half Ale");
 				$("#introTag").html("<p class='tag' id='introTag'>Here is your beer.</p>");
@@ -106,9 +102,6 @@ $(document).ready(function() {
 				$("#info-column").append("<p class='info'>" + beerDB[2].name + "</p>");
 				$("#info-column").append("<p class='info'>" + beerDB[2].brewery + "</p>");
 				$("#info-column").append("<p class='info'>" + beerDB[2].abv + "</p>");
-				// $(".info:nth-child(1)").html(beerDB[2].name);
-				// $(".info:nth-child(2)").html(beerDB[2].brewery);
-				// $(".info:nth-child(3)").html(beerDB[2].abv);
 			} else if ((surveyRes[0] == "Light") && (surveyRes[1] == "A ton") && (surveyRes[2] == "Happy") && (surveyRes[3] == "Hot")) {
 				console.log("C4 is true. Modify HTML with results with La Fin Du Monde");
 				$("#introTag").html("<p class='tag' id='introTag'>Here is your beer.</p>");
@@ -121,9 +114,6 @@ $(document).ready(function() {
 				$("#info-column").append("<p class='info'>" + beerDB[3].name + "</p>");
 				$("#info-column").append("<p class='info'>" + beerDB[3].brewery + "</p>");
 				$("#info-column").append("<p class='info'>" + beerDB[3].abv + "</p>");
-				// $(".info:nth-child(1)").html(beerDB[3].name);
-				// $(".info:nth-child(2)").html(beerDB[3].brewery);
-				// $(".info:nth-child(3)").html(beerDB[3].abv);
 			} else if ((surveyRes[0] == "default") && (surveyRes[1] == "default") && (surveyRes[2] == "default") && (surveyRes[3] == "default")) {
 					alert("Please answer each question. Hopefully we've got a match.");
 			} else {
@@ -151,39 +141,22 @@ $(document).ready(function() {
 				//Validation to see of the request returned data, if null display a string
 				var title = data.title || "No title available";
 				$("#info-column").append("<p class='rando'>" + title + "</p>");
-				// $(".info:nth-child(1)").html(data.title);
 				//Validation to see of the request returned data, if null display a string
 				var breweryTitle = data.brewery.title || "No brewery available";
 				$("#info-column").append("<p class='rando'>" + breweryTitle + "</p>");
-				// $(".info:nth-child(2)").html(data.brewery.title);
 				//Validation to see of the request returned data, if null display a string
 				var alcohol = data.abv || "No";
 				$("#info-column").append("<p class='rando'>" + alcohol +  " ABV </p>");
-				// $(".info:nth-child(3)").html(data.abv);
-
 				},
 			});
 		});
 
-		//RESET FUNCTION
-
-		/*
+		/*RESET FUNCTION
 		listen for click on #findAnother
-			reload the page using jQuery
-		*/
+			reload the page using jQuery*/
 
 		$("#findAnother").click( function() {
 			location.reload();
-
-			// $("#introTag").html("<p class='tag' id='introTag'>Your beer is waiting for you. Go find it.</p>");
-			// $("#results").hide();
-			// $("#img-column, #info-column").hide();
-			// $(".beer-box").show();
-			// $(".questions").show();
-			// $("#findAnother").hide();
-			// $("#find").show();
-			// $(".questions").prop('selectedIndex', 0);
-			// $("#rando-beer").show();
 		});
 });
 
