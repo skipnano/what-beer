@@ -1,10 +1,10 @@
 /*
 Project: What Beer - Final Project
 Coded by: Dean G
+Version: 1.3
 */
 
-/*Google Fonts
-font-family: 'Press Start 2P', cursive;
+/*font-family: 'Press Start 2P', cursive;
 font-family: 'Bad Script', cursive;*/
 
 
@@ -17,6 +17,7 @@ font-family: 'Bad Script', cursive;*/
 	margin: 0 auto;
 	max-width: 960px;
 	background: #DDD;
+	clear: both;
 }
 
 .beer-box {
@@ -49,6 +50,62 @@ font-family: 'Bad Script', cursive;*/
 .hide {
 	display: none;
 }
+/*ADDED SEARCH ON 07/09/15 SKIPNANO*/
+.search {
+	float: right;
+	margin-top: -44px;
+	margin-right: 10px;
+}
+.search-control {
+	padding: 3px;
+	border-bottom-color: #FFCC33;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	background: black;
+	color: white;
+	margin-right: 3px;
+	width: 225px;
+	font-family: 'Bad Script', cursive;
+}
+.search-btn {
+	padding: 15px;
+	border: none;
+	background: #FFCC33;
+	font-family: 'Press Start 2P', cursive;
+}
+/*ADDED MOBILE SEARCH 07/12/15*/
+/*.menu-btn {
+  clear: both;
+}*/
+.menu-btn div {
+  	left: 100%;
+  	top: 64%;
+  	padding-right: 8px;
+  	margin-top: -0.50em;
+  	line-height: 1.2;
+  	font-size: 18px;
+  	font-weight: 200;
+  	vertical-align: middle;
+  	z-index: 99;
+}
+.menu-btn span {
+  	display: block;
+  	width: 19px;
+  	height: 3px;
+  	margin: 4px 0;
+  	background: yellow;
+  	z-index: 99;
+  	display: none;
+}
+.responsive-menu {
+  	display: none;
+}
+
+.expand {
+  	display: none;
+}
+/*END MOBILE SEARCH*/
 select {
 	margin: 20px;
 }
@@ -84,9 +141,9 @@ footer {
 nav {
 	margin-right: 10px;
 }
-nav img{
+/*nav img{
 	padding: 10px 20px;
-}
+}*/
 .addthis_sharing_toolbox {
 	padding: 10px 20px;
 	display: inline;
@@ -146,7 +203,16 @@ nav img{
 	padding: 0;
 	margin-top: 75px;
 }
-
+.search-res {
+	font-size: 30px;
+	text-align: center;
+	font-family: 'Bad Script', cursive;
+	padding: 0;
+	margin-top: 75px;
+}
+.mobile-search {
+	display: none;
+}
 #find:hover {
 	border: 5px dashed #FFCC33;
 }
@@ -156,27 +222,39 @@ nav img{
 #findAnother:hover {
 	border: 5px dashed #FFCC33;
 }
+.search-btn:hover {
+	background: #CCC;
+}
+input:focus {
+	outline: none !important;
+}
+button:focus {
+	outline: none !important;
+}
 
 /*BEGIN RESPONSIVE*/
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px), and (-webkit-min-device-pixel-ratio: 2) {
 
+/*	.container-background {
+		display: none;
+	}*/
+	h1 {
+		font-size: 1.5rem;
+	}
 	.tag {
 		font-size: 1.5rem;
 	}
-
 	.container-content {
 		width: 95%;
 	}
-
 	#introTag p {
 		width: 100%;
 	}
-
 	.beer-box {
+		width: 85%;
 		margin: 35px auto 20px auto;
 	}
-
 	.questions {
 		width: 60%;
 		margin: 10px;
@@ -204,6 +282,7 @@ nav img{
 	}
 	.info {
 		font-size: 2.0rem;
+		/*width: 120%;*/
 	}
 	#rando-beer {
 		margin: 6%;
@@ -216,12 +295,63 @@ nav img{
 		margin: 0;
 		padding: 5%;
 	}
-
+	/*ADDED ON 07/12/15*/
+	.search-res {
+		font-size: 2.0rem;
+		margin: 0;
+		padding: 5%;
+	}
+	.search {
+		display: none;
+	}
+	.mobile-nav {
+		clear: both;
+	}
+	.menu-btn {
+      	clear: both;
+      	float: right;
+      	margin: -38px 5px;      
+    }
+    .menu-btn span {
+      	display: block;
+      	width: 50px;
+	  	height: 5px;
+	  	margin: 8px 0;
+      	background: #FFCC33;
+      	z-index: 99;
+    }
+    .expand {
+      	display: block !important;
+      	float: right;
+    }
+    .mobile-search {
+    	/*display: inline-block;*/
+    	width: 100%;
+  		background-color: black;
+  		margin-bottom: 10px;
+    }
+    .mobile-search-control {
+    	padding: 10px;
+		border-bottom-color: #FFCC33;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		background: black;
+		color: white;
+		width: 93%;
+		font-family: 'Bad Script', cursive;
+		margin: 1%;
+	}
+	.mobile-search-btn {
+		padding: 19px;
+		border: none;
+		background: #FFCC33;
+		font-family: 'Press Start 2P', cursive;
+		margin: 1%;
+		width: 98%;
+	}
+	.mobile-search-btn:hover {
+		background: #CCC;
+	}
 } 
 /*END RESPONSIVE*/
-
-
-
-
-
-

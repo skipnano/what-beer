@@ -16,7 +16,32 @@
 		<div class="container-content">
 			<header>
 				<h1>What Beer</h1>
+				<!-- ADDED ON 07/09/15 SKIPNANO -->
+				<div class="search">
+					<input type="text" class="search-control" placeholder="Search by beer name...">
+					<span class="input-group-btn">
+						<button class="search-btn" type="button">Go!</button>
+					</span>
+				</div><!-- /search -->
+
+				<!-- Mobile hamburger menu - hidden on desktop -->
+				<div class="mobile-nav">
+					<div class="menu-btn" id="menu-btn">
+						<div></div>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
 			</header>
+			
+			<!-- mobile search input field -hidden on desktop -->
+			<div class="mobile-search">
+				<input type="text" class="mobile-search-control" placeholder="Search by beer name...">
+				<span class="mobile-input-group-btn">
+					<button class="mobile-search-btn" type="button">Go find it!</button>
+				</span>
+			</div><!-- /mobile-search -->
 
 			<p class="tag" id="introTag">Your beer is waiting for you. Go find it.</p>
 			<!-- BEGIN BEER QUESTIONS FORM -->
@@ -78,7 +103,7 @@
 					<!-- <a href="https://www.facebook.com" target="blank"><img border = "0" src="images/facebook.png"></a> -->
 				</nav>
 				<p>Copyright 2015. What Beer.</p>
-				<p>Random beers generated using http://prost.herokuapp.com/api/v1</p>
+				<p>Random beers, and search results generated using http://prost.herokuapp.com/api/v1</p>
 			</footer>
 		</div>
 	</div>

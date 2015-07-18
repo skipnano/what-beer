@@ -1,5 +1,6 @@
 // Project: Final Project - What Beer
 // Coded by: Dean G
+// Version: 1.3
 
 /*
 BEGIN PSEUDO CODE
@@ -28,7 +29,6 @@ $(document).ready(function() {
 			var q2Val = $("#q2").val();
 			var q3Val = $("#q3").val();
 			var q4Val = $("#q4").val();
-
 
 			// the below sets the array equal to the slected values in the above varibales
 			var surveyRes = [];
@@ -151,13 +151,94 @@ $(document).ready(function() {
 			});
 		});
 
-		/*RESET FUNCTION
+		//RESET FUNCTION
+		/*
 		listen for click on #findAnother
-			reload the page using jQuery*/
+			reload the page using jQuery
+		*/
 
 		$("#findAnother").click( function() {
 			location.reload();
 		});
-});
 
+		// SEARCH SCRIPTS START HERE - 07-13-15
+
+		//Gets the value searched on desktop and stores it in a varibale
+        $('.search-btn').click( function() {
+        	var searchVal = $('.search-control').val().toLowerCase();
+        	//closes spaces between words
+        	searchVal = searchVal.replace(/\s+/g, '');
+    	    console.log(searchVal);
+    	    $('.search-control').val('');
+    	    //alert("We're working on building this out. Stay tuned!");
+
+    	    var searchResD = ("http://prost.herokuapp.com/api/v1/beer/" + searchVal);
+				console.log(searchResD);
+
+			$.ajax({
+				dataType: "jsonp", 
+				url: searchResD,
+				success: function(data){
+					console.log(data);
+
+				$("#introTag").html("<p class='tag' id='introTag'>Here is your beer.</p>");
+				$("#find").hide();
+				$("#rando-beer").hide();
+				$("#findAnother").css('display', 'block');
+				$("#results, #questions").toggleClass("hide");
+				var title = data.title || "We could not find that";
+				$("#info-column").append("<p class='search-res'>" + title + "</p>");
+				//Validation to see of the request returned data, if null display a string
+				var breweryTitle = data.brewery.title || "No brewery available";
+				$("#info-column").append("<p class='search-res'>" + breweryTitle + "</p>");
+				//Validation to see of the request returned data, if null display a string
+				var alcohol = data.abv || "No";
+				$("#info-column").append("<p class='search-res'>" + alcohol +  " ABV </p>");
+				},
+      		});
+		});
+
+		//Displays the mobile search input field
+		jQuery(function($){
+    	     $( '.menu-btn' ).click(function() {
+    	     $('.mobile-search').toggleClass('expand');
+    	     })
+        });
+
+		//Gets the value searched in mobile and stores it in a varibale
+        $('.mobile-search-btn').click( function() {
+        	var searchValMobile = $('.mobile-search-control').val().toLowerCase();
+        	//closes spaces between words
+        	searchValMobile = searchValMobile.replace(/\s+/g, '');
+    	    console.log(searchValMobile);
+    	    $('.mobile-search-control').val('');
+    	    //alert("We're working on building this out. Stay tuned!");
+
+    	    var searchResM = ("http://prost.herokuapp.com/api/v1/beer/" + searchValMobile);
+				console.log(searchResM);
+
+			$.ajax({
+				dataType: "jsonp", 
+				url: searchResM,
+				success: function(data){
+					console.log(data);
+
+				$("#introTag").html("<p class='tag' id='introTag'>Here is your beer.</p>");
+				$("#find").hide();
+				$("#rando-beer").hide();
+				$("#findAnother").css('display', 'block');
+				$("#results, #questions").toggleClass("hide");
+				var title = data.title || "We could not find that title";
+				$("#info-column").append("<p class='search-res'>" + title + "</p>");
+				//Validation to see of the request returned data, if null display a string
+				var breweryTitle = data.brewery.title || "No brewery available";
+				$("#info-column").append("<p class='search-res'>" + breweryTitle + "</p>");
+				//Validation to see of the request returned data, if null display a string
+				var alcohol = data.abv || "ABV not listed";
+				$("#info-column").append("<p class='search-res'>" + alcohol +  " ABV </p>");
+				},
+
+      		});
+		});
+});
 
