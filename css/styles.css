@@ -87,7 +87,10 @@ nav {
 nav img{
 	padding: 10px 20px;
 }
-
+.addthis_sharing_toolbox {
+	padding: 10px 20px;
+	display: inline;
+}
 #find {
 	padding: 10px 20px;
 	margin: 0 auto;
