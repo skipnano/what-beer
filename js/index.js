@@ -205,6 +205,12 @@ $(document).ready(function() {
     	     })
         });
 
+        /*ADDED 07-25-15 - script to animate hamburger menu
+        Source; http://codepen.io/designcouch/pen/Atyop*/
+		$('#menu-btn-animate').click(function(){
+			$(this).toggleClass('open');
+		});
+
 		//Gets the value searched in mobile and stores it in a varibale
         $('.mobile-search-btn').click( function() {
         	var searchValMobile = $('.mobile-search-control').val().toLowerCase();
