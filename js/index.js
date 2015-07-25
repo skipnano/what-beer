@@ -201,7 +201,7 @@ $(document).ready(function() {
 		//Displays the mobile search input field
 		jQuery(function($){
     	     $( '.menu-btn' ).click(function() {
-    	     $('.mobile-search').toggleClass('expand');
+    	     $('.mobile-search').slideToggle('expand');
     	     })
         });
 
