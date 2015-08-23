@@ -200,13 +200,15 @@ footer {
 nav {
 	margin-right: 10px;
 }
-/*nav img{
-	padding: 10px 20px;
-}*/
+/*ADDTHIS STYLES*/
 .addthis_sharing_toolbox {
 	padding: 10px 20px;
 	display: inline;
 }
+.at4-icon {
+	border-radius: 2px;
+}
+/*END ADDTHIS STYLES*/
 #find {
 	padding: 10px 20px;
 	margin: 0 auto;
