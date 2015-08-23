@@ -71,7 +71,8 @@ font-family: 'Bad Script', cursive;*/
 .search-btn {
 	padding: 15px;
 	/*border: none;*/
-	border: solid #FFCC33;
+	border: solid 2px #FFCC33;
+	border-radius: 5px;
 	/*background: #FFCC33;*/
 	background: none;
 	color: #FFCC33;
@@ -194,6 +195,7 @@ footer {
 	background: black;
 	color: white;
 	text-align: center;
+	height: 100%;
 }
 nav {
 	margin-right: 10px;
@@ -211,6 +213,7 @@ nav {
 	background-color: slategray;
   	color: white;
   	border: none;
+  	border-radius: 5px;
   	font-family: 'Press Start 2P', cursive;
   	display: block;
 }
@@ -220,6 +223,7 @@ nav {
 	background-color: slategray;
   	color: white;
   	border: none;
+  	border-radius: 5px;
   	font-family: 'Press Start 2P', cursive;
   	display: none;
 }
@@ -250,6 +254,7 @@ nav {
 	background-color: slategray;
   	color: white;
   	border: none;
+  	border-radius: 5px;
   	font-family: 'Press Start 2P', cursive;
   	display: block;
 }
@@ -300,6 +305,9 @@ button:focus {
 	h1 {
 		font-size: 1.5rem;
 	}
+	h2 {
+		font-size: 1.15rem;
+	}
 	.tag {
 		font-size: 1.5rem;
 	}
@@ -312,6 +320,7 @@ button:focus {
 	.beer-box {
 		width: 85%;
 		margin: 35px auto 20px auto;
+		height: 300px;
 	}
 	.questions {
 		width: 60%;
