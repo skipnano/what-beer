@@ -205,14 +205,7 @@ nav {
 	padding: 10px 20px;
 	display: inline;
 }
-.at4-icon
-.aticon-facebook
-.aticon-twitter
-.aticon-gmail
-.aticon-linkedin 
-.aticon-email
-.aticon-print 
-.aticon-compact {
+.at-share-btn {
 	border-radius: 2px;
 }
 /*END ADDTHIS STYLES*/
