@@ -208,7 +208,7 @@ nav {
 }
 .at-share-tbx-element 
 .at-share-btn {
-	border-radius: 2px;
+	border-radius: 3px;
 }
 /*END ADDTHIS STYLES*/
 #find {
@@ -415,14 +415,18 @@ button:focus {
 	}
 	.mobile-search-btn {
 		padding: 19px;
-		border: none;
-		background: #FFCC33;
-		font-family: 'Press Start 2P', cursive;
-		margin: 1%;
-		width: 98%;
+	    border: none;
+	    font-family: 'Press Start 2P', cursive;
+	    border: solid 2px #FFCC33;
+	    border-radius: 10px;
+	    background: none;
+	    color: #FFCC33;
+	    margin: 1%;
+	    width: 98%;
 	}
 	.mobile-search-btn:hover {
 		background: #CCC;
+		color: black;
 	}
 } 
 /*END RESPONSIVE*/
