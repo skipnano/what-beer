@@ -1,7 +1,7 @@
 /*
 Project: What Beer - Final Project
 Coded by: Dean G
-Version: 1.3
+Version: 1.4 - 10-3-15
 */
 
 /*font-family: 'Press Start 2P', cursive;
@@ -83,86 +83,32 @@ font-family: 'Bad Script', cursive;*/
   clear: both;
 }*/
 .menu-btn div {
-  	left: 100%;
-  	top: 64%;
-  	padding-right: 8px;
-  	margin-top: -0.50em;
-  	line-height: 1.2;
-  	font-size: 18px;
-  	font-weight: 200;
-  	vertical-align: middle;
-  	z-index: 99;
+  left: 100%;
+  top: 64%;
+  padding-right: 8px;
+  margin-top: -0.50em;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 200;
+  vertical-align: middle;
+  z-index: 99;
 }
 .menu-btn span {
-  	display: block;
-  	width: 19px;
-  	height: 3px;
-  	margin: 4px 0;
-  	background: yellow;
-  	z-index: 99;
-  	display: none;
+  display: block;
+  width: 19px;
+  height: 3px;
+  margin: 4px 0;
+  background: yellow;
+  z-index: 99;
+  display: none;
 }
 .responsive-menu {
-  	display: none;
+  display: none;
 }
 
 .expand {
-  	display: none;
+  display: none;
 }
-
-/*ADDED 07-25-15 - CSS HAMBURGER ANIMATION
-Source: http://codepen.io/designcouch/pen/Atyop;*/
-
-#menu-btn-animate {
-}
-
-#menu-btn-animate span:nth-child(1) {
-  top: 0px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-}
-
-#menu-btn-animate span:nth-child(2) {
-  top: 18px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-}
-
-#menu-btn-animate span:nth-child(3) {
-  top: 36px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-}
-
-#menu-btn-animate.open span:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: -3px;
-  left: 8px;
-}
-
-#menu-btn-animate.open span:nth-child(2) {
-  width: 0%;
-  opacity: 0;
-}
-
-#menu-btn-animate.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  top: 39px;
-  left: 8px;
-}
-
 /*END MOBILE SEARCH*/
 select {
 	margin: 20px;
@@ -208,7 +154,7 @@ nav {
 }
 .at-share-tbx-element 
 .at-share-btn {
-	border-radius: 3px;
+	border-radius: 2px;
 }
 /*END ADDTHIS STYLES*/
 #find {
@@ -276,6 +222,9 @@ nav {
 	padding: 0;
 	margin-top: 75px;
 }
+#fa-icon{
+	display: none;
+}
 .mobile-search {
 	display: none;
 }
@@ -301,7 +250,7 @@ button:focus {
 
 /*BEGIN RESPONSIVE*/
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px), and (-webkit-min-device-pixel-ratio: 2) {
 
 /*	.container-background {
 		display: none;
@@ -309,23 +258,25 @@ button:focus {
 	h1 {
 		font-size: 1.5rem;
 	}
-	h2 {
-		font-size: 1.15rem;
-	}
+
 	.tag {
 		font-size: 1.5rem;
 	}
+
 	.container-content {
 		width: 95%;
 	}
+
 	#introTag p {
 		width: 100%;
 	}
+
 	.beer-box {
 		width: 85%;
 		margin: 35px auto 20px auto;
 		height: 300px;
 	}
+
 	.questions {
 		width: 60%;
 		margin: 10px;
@@ -378,19 +329,15 @@ button:focus {
 	.mobile-nav {
 		clear: both;
 	}
-	.menu-btn {
-      	clear: both;
+	/*FONT AWESOOME ICON ADDED 10/03/2015*/
+	.fa-search {
+		clear: both;
       	float: right;
-      	margin: -30px 15px;  
-    }
-    .menu-btn span {
-      	display: block;
-      	width: 40px;
-	  	height: 3px;
-	  	margin: 8px 0;
-      	background: #FFCC33;
-      	z-index: 99;
-    }
+      	margin: -36px 21px;
+	}
+	#fa-icon{
+		display: block;
+	}	
     .expand {
       	display: block !important;
       	float: right;

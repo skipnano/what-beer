@@ -8,10 +8,11 @@
 	<link rel="stylesheet" href="css/styles.css">
 	<link href='https://fonts.googleapis.com/css?family=Bad+Script|Press+Start+2P' rel='stylesheet' type='text/css'>
 	<link rel="icon" type="image/png" href="images/wb_favicon.png"/>
+	<!-- Font Awesome CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<!-- For iPhone and iPad -->
-  	<link rel="apple-touch-icon-precomposed" href="images/what-beer-iphone.png"/>
+  	<link rel="apple-touch-icon-precomposed" href="images/what-beer2.png"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="Description" content="A site that allows a user to search for beer or generate a random beer.">
 
 </head>
 
@@ -26,17 +27,11 @@
 					<span class="input-group-btn">
 						<button class="search-btn" type="button">Go!</button>
 					</span>
-				</div> <!-- end desktp search -->
+				</div><!-- /search -->
 
-				<!-- Mobile hamburger menu - hidden on desktop -->
-				<div class="mobile-nav">
-					<div class="menu-btn" id="menu-btn-animate">
-						<div></div>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</div>
+				<!-- FontAwesome Search Icon (Hidden in Desktop) -->
+				<i id="fa-icon" class="fa fa-search fa-2x"></i>
+
 			</header>
 			
 			<!-- mobile search input field -hidden on desktop -->
@@ -45,7 +40,7 @@
 				<span class="mobile-input-group-btn">
 					<button class="mobile-search-btn" type="button">Go find it!</button>
 				</span>
-			</div> <!-- end mobile-search -->
+			</div><!-- /mobile-search -->
 
 			<p class="tag" id="introTag">Your beer is waiting for you. Go find it.</p>
 			<!-- BEGIN BEER QUESTIONS FORM -->
@@ -103,8 +98,6 @@
 				<h2>What beer should you have?</h2>
 				<nav>
 					<div class="addthis_sharing_toolbox"></div>
-					<!-- <a href="https://www.twitter.com" target="blank"><img border = "0" src="images/twitter.png"></a> -->
-					<!-- <a href="https://www.facebook.com" target="blank"><img border = "0" src="images/facebook.png"></a> -->
 				</nav>
 				<p>&copy; 2015 What Beer.</p>
 				<p>Random beers, and search results generated using http://prost.herokuapp.com/api/v1</p>
