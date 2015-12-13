@@ -132,30 +132,27 @@ $(document).ready(function() {
 			$.ajax({
 				dataType: "jsonp", 
 				url: randomBeer,
-				// error: function(data) {
-				// 	alert("Beer not found");
-				// },
 
 				success: function(data){
 					console.log(data);
 
-				$("#introTag").html("<p class='tag' id='introTag'>Here is your beer.</p>");
-				$("#find").hide();
-				$("#rando-beer").hide();
-				$("#findAnother").css('display', 'block');
-				$("#results, #questions").toggleClass("hide");
-				//Validation to see of the request returned data, if null display a string
-				var title = data.title || "No title available";
-				$("#info-column").append("<p class='rando'>" + title + "</p>");
-				// $(".info:nth-child(1)").html(data.title);
-				//Validation to see of the request returned data, if null display a string
-				var breweryTitle = data.brewery.title || "No brewery available";
-				$("#info-column").append("<p class='rando'>" + breweryTitle + "</p>");
-				// $(".info:nth-child(2)").html(data.brewery.title);
-				//Validation to see of the request returned data, if null display a string
-				var alcohol = data.abv || "No";
-				$("#info-column").append("<p class='rando'>" + alcohol +  " ABV </p>");
-				// $(".info:nth-child(3)").html(data.abv);
+					$("#introTag").html("<p class='tag' id='introTag'>Here is your beer.</p>");
+					$("#find").hide();
+					$("#rando-beer").hide();
+					$("#findAnother").css('display', 'block');
+					$("#results, #questions").toggleClass("hide");
+					//Validation to see of the request returned data, if null display a string
+					var title = data.title || "No title available";
+					$("#info-column").append("<p class='rando'>" + title + "</p>");
+					// $(".info:nth-child(1)").html(data.title);
+					//Validation to see of the request returned data, if null display a string
+					var breweryTitle = data.brewery.title || "No brewery available";
+					$("#info-column").append("<p class='rando'>" + breweryTitle + "</p>");
+					// $(".info:nth-child(2)").html(data.brewery.title);
+					//Validation to see of the request returned data, if null display a string
+					var alcohol = data.abv || "No";
+					$("#info-column").append("<p class='rando'>" + alcohol +  " ABV </p>");
+					// $(".info:nth-child(3)").html(data.abv);
 				}
 			});
 		});
@@ -186,7 +183,7 @@ $(document).ready(function() {
 				console.log(searchResD);
 
 			$.ajax({
-				dataType: "jsonp", 
+				// dataType: "jsonp", 
 				url: searchResD,
 				success: function(data){
 					console.log(data);
@@ -204,8 +201,20 @@ $(document).ready(function() {
 					//Validation to see of the request returned data, if null display a string
 					var alcohol = data.abv || "No";
 					$("#info-column").append("<p class='search-res'>" + alcohol +  " ABV </p>");
-					},
-				});
+				},
+				error: function() {
+					// debugger;
+
+					$("#introTag").html("<p class='tag' id='introTag'>We're so sorry!</p>");
+					$("#find").hide();
+					$("#rando-beer").hide();
+					$("#findAnother").css('display', 'block');
+					$("#results, #questions").toggleClass("hide");
+					$("#info-column").append("<p class='search-res'>No beer here</p>");
+					$("#info-column").append("<p class='search-res'>The beer does not exist</p>");
+					$("#info-column").append("<p class='search-res'>We could not find that beer</p>");
+				}	
+			});	
 		});
 
 		//Displays the mobile search input field
@@ -229,7 +238,7 @@ $(document).ready(function() {
 				console.log(searchResM);
 
 			$.ajax({
-				dataType: "jsonp", 
+				// dataType: "jsonp", 
 				url: searchResM,
 				success: function(data){
 					console.log(data);
@@ -248,7 +257,18 @@ $(document).ready(function() {
 				var alcohol = data.abv || "No";
 				$("#info-column").append("<p class='search-res'>" + alcohol +  " ABV </p>");
 				},
+				error: function() {
+					// debugger;
 
+					$("#introTag").html("<p class='tag' id='introTag'>We're so sorry!</p>");
+					$("#find").hide();
+					$("#rando-beer").hide();
+					$("#findAnother").css('display', 'block');
+					$("#results, #questions").toggleClass("hide");
+					$("#info-column").append("<p class='search-res'>No beer here</p>");
+					$("#info-column").append("<p class='search-res'>The beer does not exist</p>");
+					$("#info-column").append("<p class='search-res'>We could not find that beer</p>");
+				}	
       		});
 		});
 
