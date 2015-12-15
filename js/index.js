@@ -168,9 +168,9 @@ $(document).ready(function() {
 			location.reload();
 		});
 
-		// SEARCH SCRIPTS START HERE - 07-13-15
+		// SEARCH SCRIPTS START HERE
 
-		//Gets the value searched on desktop and stores it in a varibale
+		//Gets the value searched on DESKTOP and stores it in a varibale
         $('.search-btn').click( function() {
         	var searchVal = $('.search-control').val().toLowerCase();
         	//closes spaces between words
@@ -183,8 +183,9 @@ $(document).ready(function() {
 				console.log(searchResD);
 
 			$.ajax({
-				// dataType: "jsonp", 
+				dataType: "jsonp", 
 				url: searchResD,
+				timeout: 1500,
 				success: function(data){
 					console.log(data);
 
@@ -217,7 +218,7 @@ $(document).ready(function() {
 			});	
 		});
 
-		//Displays the mobile search input field
+		//Displays the MOBILE search input field
 		//Font Awesome 10-03-15
         jQuery(function($) {
         	$('.fa-search').click(function() {
@@ -238,24 +239,25 @@ $(document).ready(function() {
 				console.log(searchResM);
 
 			$.ajax({
-				// dataType: "jsonp", 
+				dataType: "jsonp", 
 				url: searchResM,
+				timeout: 1500,
 				success: function(data){
 					console.log(data);
 
-				$("#introTag").html("<p class='tag' id='introTag'>Here is your beer.</p>");
-				$("#find").hide();
-				$("#rando-beer").hide();
-				$("#findAnother").css('display', 'block');
-				$("#results, #questions").toggleClass("hide");
-				var title = data.title || "We could not find that title";
-				$("#info-column").append("<p class='search-res'>" + title + "</p>");
-				//Validation to see of the request returned data, if null display a string
-				var breweryTitle = data.brewery.title || "No brewery available";
-				$("#info-column").append("<p class='search-res'>" + breweryTitle + "</p>");
-				//Validation to see of the request returned data, if null display a string
-				var alcohol = data.abv || "No";
-				$("#info-column").append("<p class='search-res'>" + alcohol +  " ABV </p>");
+					$("#introTag").html("<p class='tag' id='introTag'>Here is your beer.</p>");
+					$("#find").hide();
+					$("#rando-beer").hide();
+					$("#findAnother").css('display', 'block');
+					$("#results, #questions").toggleClass("hide");
+					var title = data.title || "We could not find that title";
+					$("#info-column").append("<p class='search-res'>" + title + "</p>");
+					//Validation to see of the request returned data, if null display a string
+					var breweryTitle = data.brewery.title || "No brewery available";
+					$("#info-column").append("<p class='search-res'>" + breweryTitle + "</p>");
+					//Validation to see of the request returned data, if null display a string
+					var alcohol = data.abv || "No";
+					$("#info-column").append("<p class='search-res'>" + alcohol +  " ABV </p>");
 				},
 				error: function() {
 					// debugger;
@@ -269,7 +271,6 @@ $(document).ready(function() {
 					$("#info-column").append("<p class='search-res'>The beer does not exist</p>");
 					$("#info-column").append("<p class='search-res'>We could not find that beer</p>");
 				}	
-      		});
 		});
-
+	});
 });
