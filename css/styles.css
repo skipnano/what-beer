@@ -1,21 +1,23 @@
 /*
 Project: What Beer - Final Project
 Coded by: Dean G
-Version: 1.4 - 10-3-15
+Version: 1.5 - 11-20-15
 */
 
-/*font-family: 'Press Start 2P', cursive;
-font-family: 'Bad Script', cursive;*/
+/*
+font-family: 'Press Start 2P', cursive;
+font-family: 'Bad Script', cursive;
+font-family: 'Oxygen', sans-serif;
+*/
 
 
 .container-background {
 	margin: 0 auto;
-	background: #FFCC33;
+	/*background: #FFCC33;*/
 }
 
 .container-content {
 	margin: 0 auto;
-	max-width: 960px;
 	background: #DDD;
 	clear: both;
 }
@@ -54,7 +56,7 @@ font-family: 'Bad Script', cursive;*/
 .search {
 	float: right;
 	margin-top: -44px;
-	margin-right: 10px;
+	margin-right: 20px;
 }
 .search-control {
 	padding: 3px;
@@ -66,14 +68,12 @@ font-family: 'Bad Script', cursive;*/
 	color: white;
 	margin-right: 3px;
 	width: 225px;
-	font-family: 'Bad Script', cursive;
+	font-family: 'Oxygen', sans-serif;
 }
 .search-btn {
 	padding: 15px;
-	/*border: none;*/
 	border: solid 2px #FFCC33;
 	border-radius: 5px;
-	/*background: #FFCC33;*/
 	background: none;
 	color: #FFCC33;
 	font-family: 'Press Start 2P', cursive;
@@ -109,13 +109,66 @@ font-family: 'Bad Script', cursive;*/
 .expand {
   display: none;
 }
+
+/*ADDED 07-25-15 - CSS HAMBURGER ANIMATION
+Source: http://codepen.io/designcouch/pen/Atyop*/
+
+#menu-btn-animate {
+}
+
+#menu-btn-animate span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#menu-btn-animate span:nth-child(2) {
+  top: 18px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#menu-btn-animate span:nth-child(3) {
+  top: 36px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#menu-btn-animate.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+#menu-btn-animate.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#menu-btn-animate.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 8px;
+}
 /*END MOBILE SEARCH*/
 select {
 	margin: 20px;
 }
 
 form label {
-	font-family: 'Bad Script', cursive;
+	font-family: 'Oxygen', sans-serif;
 	font-size: 24px;
 }
 
@@ -179,7 +232,7 @@ nav {
 }
 .tag {
 	text-align: center;
-	font-family: 'Bad Script', cursive;
+	font-family: 'Oxygen', sans-serif;
 	font-size: 35px;
 }
 #img-column {
@@ -195,7 +248,7 @@ nav {
 .info {
 	font-size: 25px;
 	text-align: center;
-	font-family: 'Bad Script', cursive;
+	font-family: 'Oxygen', sans-serif;
 	padding: 10px 30px;
 }
 #rando-beer {
@@ -211,14 +264,14 @@ nav {
 .rando {
 	font-size: 30px;
 	text-align: center;
-	font-family: 'Bad Script', cursive;
+	font-family: 'Oxygen', sans-serif;
 	padding: 0;
 	margin-top: 75px;
 }
 .search-res {
 	font-size: 30px;
 	text-align: center;
-	font-family: 'Bad Script', cursive;
+	font-family: 'Oxygen', sans-serif;
 	padding: 0;
 	margin-top: 75px;
 }
@@ -238,8 +291,8 @@ nav {
 	border: 5px dashed #FFCC33;
 }
 .search-btn:hover {
-	background: #CCC;
-	color: black;
+	background: rgba(255, 204, 51, 0.62);
+	color: white;
 }
 input:focus {
 	outline: none !important;
@@ -250,8 +303,7 @@ button:focus {
 
 /*BEGIN RESPONSIVE*/
 
-@media only screen and (max-width: 768px) {
-/*and (-webkit-min-device-pixel-ratio: 2)*/ 
+@media only screen and (max-width: 768px), and (-webkit-min-device-pixel-ratio: 2) {
 
 /*	.container-background {
 		display: none;
@@ -265,7 +317,7 @@ button:focus {
 	}
 
 	.container-content {
-		width: 95%;
+		width: 100%;
 	}
 
 	#introTag p {
@@ -339,6 +391,19 @@ button:focus {
 	#fa-icon{
 		display: block;
 	}	
+	/*.menu-btn {
+      	clear: both;
+      	float: right;
+      	margin: -30px 15px;  
+    }
+    .menu-btn span {
+      	display: block;
+      	width: 40px;
+	  	height: 3px;
+	  	margin: 8px 0;
+      	background: #FFCC33;
+      	z-index: 99;
+    }*/
     .expand {
       	display: block !important;
       	float: right;
@@ -358,7 +423,7 @@ button:focus {
 		background: black;
 		color: white;
 		width: 93%;
-		font-family: 'Bad Script', cursive;
+		font-family: 'Oxygen', sans-serif;
 		margin: 1%;
 	}
 	.mobile-search-btn {
