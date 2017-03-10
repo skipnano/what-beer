@@ -105,63 +105,10 @@ font-family: 'Oxygen', sans-serif;
 .responsive-menu {
   display: none;
 }
-
 .expand {
   display: none;
 }
 
-/*ADDED 07-25-15 - CSS HAMBURGER ANIMATION
-Source: http://codepen.io/designcouch/pen/Atyop*/
-
-#menu-btn-animate {
-}
-
-#menu-btn-animate span:nth-child(1) {
-  top: 0px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-}
-
-#menu-btn-animate span:nth-child(2) {
-  top: 18px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-}
-
-#menu-btn-animate span:nth-child(3) {
-  top: 36px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-}
-
-#menu-btn-animate.open span:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: -3px;
-  left: 8px;
-}
-
-#menu-btn-animate.open span:nth-child(2) {
-  width: 0%;
-  opacity: 0;
-}
-
-#menu-btn-animate.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  top: 39px;
-  left: 8px;
-}
 /*END MOBILE SEARCH*/
 select {
 	margin: 20px;
@@ -303,7 +250,7 @@ button:focus {
 
 /*BEGIN RESPONSIVE*/
 
-@media only screen and (max-width: 768px), and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (max-width: 768px) {
 
 /*	.container-background {
 		display: none;
@@ -391,7 +338,7 @@ button:focus {
 	#fa-icon{
 		display: block;
 	}	
-	/*.menu-btn {
+	.menu-btn {
       	clear: both;
       	float: right;
       	margin: -30px 15px;  
@@ -403,7 +350,7 @@ button:focus {
 	  	margin: 8px 0;
       	background: #FFCC33;
       	z-index: 99;
-    }*/
+    }
     .expand {
       	display: block !important;
       	float: right;
